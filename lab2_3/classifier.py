@@ -126,7 +126,7 @@ class NeuralNetwork:
                         if self.hidden_layers_num - i - 1 >= 0 else np.transpose(X)
                 )
 
-    def predict(self, x):
+    def predict(self, X):
         """
         Предсказание сети
         
