@@ -1,7 +1,6 @@
 from tqdm import tqdm
 import numpy as np
 import scipy.special as scipy
-from tqdm import tqdm
 
 
 LEARNING_RATE = 0.1
@@ -40,7 +39,7 @@ class NeuralNetwork:
         # 3-х мерная матрица весов всех связей
         self.weights = []
         # 3-х мерная матрица значений выхода всех узлов
-        self.outs  = []
+        self.outs = []
         # 3-х мерная матрица ошибок для каждого узла
         self.errors = []
 
@@ -73,7 +72,7 @@ class NeuralNetwork:
 
     def error(self):
         """
-        Метод для определения среднеквадратичной ошибки.
+        Метод для определения квадратичной ошибки на выходном слое.
         Чем меньше этот показатель, тем мы ближе к эталонной точности.
         """
         return sum(er*er for er in self.errors[0])
